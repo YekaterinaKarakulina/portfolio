@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/52a64ca834.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Portfolio</title>
 </head>
 <body>
@@ -10,6 +13,40 @@
     <h1 class="header">My portfolio!!!!!</h1>
   </header>
   <main>
+    <div class="container">
+      <div class="card">
+        <h4 class="card__title">Singolo</h4>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/singolo1.png" alt="Singolo part1">
+              </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/singolo2.png" alt="Singolo part2">
+              </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/singolo3.png" alt="Singolo part3">
+              </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="card__demo">
+          <i class="icon fas fa-desktop"></i>
+          <a href="https://yekaterinakarakulina.github.io/singolo/" class="card__link-to-demo">Link to demo</a>
+        </div>
+        <div class="card__source">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/YekaterinaKarakulina/singolo" class="card__link-to-src">Link to source code</a>
+        </div>
+      </div>
+
+
+
+    </div>
+
   </main>
 </body>
 </html>
