@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +9,92 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Portfolio</title>
 </head>
+
 <body>
   <header>
     <h1 class="header">My portfolio!!!!!</h1>
   </header>
   <main>
-    <div class="container">
-      <div class="card">
-        <h4 class="card__title">Singolo</h4>
-        <div id="swiper-container" class="swiper-container">
-          <div class="swiper-wrapper">
+    <div class="wrapper">
+      <div class="container">
+
+        <!--Singolo-->
+        <div class="card">
+          <h4 class="card__title">Singolo</h4>
+          <div id="swiper-container" class="swiper-container">
+            <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img class="card__image" src="./src/assets/singolo1.png" alt="Singolo part1">
+                <img class="card__image" src="./src/assets/singolo1.png" alt="Singolo image">
               </div>
               <div class="swiper-slide">
-                <img class="card__image" src="./src/assets/singolo2.png" alt="Singolo part2">
+                <img class="card__image" src="./src/assets/singolo2.png" alt="Singolo image">
               </div>
               <div class="swiper-slide">
-                <img class="card__image" src="./src/assets/singolo3.png" alt="Singolo part3">
+                <img class="card__image" src="./src/assets/singolo3.png" alt="Singolo image">
               </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/singolo4.png" alt="Singolo image">
+              </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/singolo5.png" alt="Singolo image">
+              </div>
+            </div>
+            <div id="swiper-pagination" class="swiper-pagination"></div>
+            <div class="swiper-button-prev" id="swiper-button-prev"></div>
+            <div class="swiper-button-next" id="swiper-button-next"></div>
           </div>
-          <div id="swiper-pagination" class="swiper-pagination"></div>
-          <!-- <div id="swiper-button-prev" class="swiper-button-prev"></div>
-          <div id="swiper-button-next" class="swiper-button-next"></div> -->
+          <p class="card__description">Pixel perfect layout and styling based on PSD model. Responsive layout (SASS).DOM
+            actions (JS basics).</p>
+          <div class="card__demo">
+            <i class="icon fas fa-desktop"></i>
+            <a href="https://yekaterinakarakulina.github.io/singolo/" class="card__link-to-demo">Link to deploy</a>
+          </div>
+          <div class="card__source">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/YekaterinaKarakulina/singolo" class="card__link-to-src">Link to source code</a>
+          </div>
         </div>
-        <p class="card__description">Pixel perfect layout. Design from Figma.</p>
-        <div class="card__demo">
-          <i class="icon fas fa-desktop"></i>
-          <a href="https://yekaterinakarakulina.github.io/singolo/" class="card__link-to-demo">Link to demo</a>
+
+        <!--Friday Live Coding-->
+        <div class="card">
+          <h4 class="card__title">Friday Live Coding</h4>
+          <div id="swiper-container" class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/fridayLiveCoding1.png" alt="Friday live coding image">
+              </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets//fridayLiveCoding2.png" alt="Friday live coding image">
+              </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/fridayLiveCoding3.png" alt="Friday live coding image">
+              </div>
+              <div class="swiper-slide">
+                <img class="card__image" src="./src/assets/fridayLiveCoding4.png" alt="Friday live coding image">
+              </div>
+            </div>
+            <div id="swiper-pagination" class="swiper-pagination"></div>
+            <div class="swiper-button-prev" id="swiper-button-prev"></div>
+            <div class="swiper-button-next" id="swiper-button-next"></div>
+          </div>
+          <p class="card__description">Landing page "Friday Live Coding". Responsive layout and styling based on Figma
+            model for fixed screen resolutions: 1440px, 768px, 375px.</p>
+          <div class="card__demo">
+            <i class="icon fas fa-desktop"></i>
+            <a href="https://yekaterinakarakulina.github.io/friday-live-coding/index.html"
+              class="card__link-to-demo">Link to deploy</a>
+          </div>
+          <div class="card__source">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/YekaterinaKarakulina/friday-live-coding" class="card__link-to-src">Link to
+              source code</a>
+          </div>
         </div>
-        <div class="card__source">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/YekaterinaKarakulina/singolo" class="card__link-to-src">Link to source code</a>
-        </div>
+
+
       </div>
-
-
-
     </div>
-
   </main>
 </body>
+
 </html>
