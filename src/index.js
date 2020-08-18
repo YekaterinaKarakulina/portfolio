@@ -1,6 +1,4 @@
-console.log('connected');
 import './sass/style.scss';
-
 import Swiper from './swiper/swiperAPI';
 
 const CONTAINER = document.querySelector('.container');
@@ -50,7 +48,6 @@ document.querySelector('header').addEventListener('click', (event) => {
     document.querySelector('.close-btn').classList.remove('hidden');
   }
   else if (event.target.classList.contains('close-btn')) {
-    console.log('close modal')
     CERTIFICATE_MODAL.classList.add('hidden');
     document.querySelector('.close-btn').classList.add('hidden');
     MODAL_IMG.classList.remove('landscape');

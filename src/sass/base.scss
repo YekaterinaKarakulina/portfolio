@@ -47,6 +47,19 @@ header {
   height: 5rem;
 }
 
+.links-to-sites {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+
+.link {
+  &:hover {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+}
+
 .certificates {
   display: flex;
   align-items: center;
@@ -61,7 +74,6 @@ header {
     width: 7.5rem;
     height: 5rem;
   }
- 
 }
 
 .wrapper {
