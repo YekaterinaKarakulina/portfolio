@@ -4,7 +4,7 @@ import './sass/style.scss';
 import Swiper from './swiper/swiperAPI';
 
 const swiper = new Swiper('.swiper-container', {
- 
+
   slidesPerView: 1,
   spaceBetween: 10,
   slidesPerGroup: 1,
@@ -21,3 +21,15 @@ const swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+document.querySelector('.container').addEventListener('mouseover', () => {
+  if (event.target.classList.contains('card__title')) {
+    event.target.closest('.card').classList.add('hovered');
+  }
+})
+
+document.querySelector('.container').addEventListener('mouseout', () => {
+  if (event.target.classList.contains('card__title')) {
+    event.target.closest('.card').classList.remove('hovered');
+  }
+})

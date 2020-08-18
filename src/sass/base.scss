@@ -82,33 +82,48 @@ header {
 .card {
   display: inline-block;
   width: 20rem;
-  min-height: 25rem;
-  padding: 0.5rem 1rem;
+  min-height: 27rem;
+  padding: 0 1rem;
   border: 2px solid #7752be;  
   border-radius: 5px;
   margin-bottom: 1rem;
-  &:hover {
+  &.hovered {
     transition: 0.5s;
     box-shadow: 0 0 20px rgba(233,127,228,.904);
   }
+ /*  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(233,127,228,.904);
+  } */
 }
 
-h4 {
-  display: inline-flex;
+.card__title {
+  display: flex;
   justify-content: center;
   font-size: 1.25rem;
   padding: 0.5rem 0;
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    cursor: pointer;
+    
+    text-shadow: -2px 0 2px #7752be, 2px 0 2px #FFF, 0 2px 2px rgba(233,127,228,.904),
+    -1px 0 1px #FFF,1px 0 1px #FFF, 0 1px 1px #FFF;
+  }
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 #swiper-button-prev,
 #swiper-button-next {
   color: #7752be;
   transform: scale(0.5);
-
+  &:hover {
+    transform: scale(0.7);
+  }
 }
 
 #swiper-button-next {
