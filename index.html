@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/52a64ca834.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -12,7 +13,35 @@
 
 <body>
   <header>
-    <h1 class="header">My portfolio!!!!!</h1>
+    <div class="header-wrapper">
+
+      <div>
+        <img class="img photo" src="./src/assets/Yekaterina_photo.JPG" alt="Yekaterina Karakulina photo">
+
+        <div class="header-info">
+          <div>Yekaterina Karakulina</div>
+          <div>
+            <i class="icon fas fa-at"></i>
+            ekaterina.jj@gmail.com
+          </div>
+          <div>
+            <i class="fas fa-paper-plane"></i>
+            @yekaterinaKarakulina
+          </div>
+          <div>
+            <i class="fas fa-mobile-alt"></i>
+            +7702 5358143
+          </div>
+        </div>
+      </div>
+
+
+      <div class="certificates">
+        <img class="img certificate landscape" src="./src/assets/Yekaterina_js.png" alt="RS school JS certificate">
+        <img class="img certificate portrait" src="./src/assets/Yekaterina_QA.png" alt="EPAM QA certificate">
+        <img class="img certificate portrait" src="./src/assets/Yekaterina_IELTS.JPG" alt="IELTS certificate">
+      </div>
+    </div>
   </header>
   <main>
     <div class="wrapper">
@@ -282,12 +311,12 @@
             <div class="swiper-button-prev" id="swiper-button-prev"></div>
             <div class="swiper-button-next" id="swiper-button-next"></div>
           </div>
-          <p class="card__description">
           <h6>Team project</h6>
-          RS lang - app for learning words with interval repetition technique, individual
-          progress tracking and mini-games.
-          Application use API with ability to create new users, users can have learning words, setting and statistics
-          data.
+          <p class="card__description">
+            RS lang - app for learning words with interval repetition technique, individual
+            progress tracking and mini-games.
+            Application use API with ability to create new users, users can have learning words, setting and statistics
+            data.
           </p>
           <div class="card__demo">
             <i class="icon fas fa-desktop"></i>
@@ -320,9 +349,9 @@
             <div class="swiper-button-prev" id="swiper-button-prev"></div>
             <div class="swiper-button-next" id="swiper-button-next"></div>
           </div>
-          <p class="card__description">
           <h6>React app</h6>
-          Animal farm - single page application. Quiz to recognize animals, birds and insects by their voices.
+          <p class="card__description">
+            Animal farm - single page application. Quiz to recognize animals, birds and insects by their voices.
           </p>
           <div class="card__demo">
             <i class="icon fas fa-desktop"></i>

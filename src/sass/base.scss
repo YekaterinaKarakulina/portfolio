@@ -1,5 +1,6 @@
 body {
-  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
   margin: 0;
   padding: 0;  
 }
@@ -10,20 +11,72 @@ h1, h4, h6, p, div, span {
 }
   
 header {
-  height: 5rem;
+  height: 8.5rem;
   width: 100%;
-  background-color: #7752be;
+  background-color: #E6E6FA;
+}
+
+.header-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-info {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  &>*:first-child {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+.img {
+  border-radius: 5%;
+  margin-right: 1rem;
+  border: 2px solid #7752be;
+  box-shadow: 0 0 20px rgba(233,127,228,.904);
+}
+
+.photo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.certificates {
+  display: flex;
+  align-items: center;
+}
+
+.certificate {
+  &.portrait {
+    width: 5rem;
+    height: 6.5rem;
+  }
+  &.landscape {
+    width: 7.5rem;
+    height: 5rem;
+  }
+ 
 }
 
 .wrapper {
   display: block;
-  width: 120rem;
+  width: 80%;
   margin: 0 auto;
 }
 
 .container {
-  margin: 5rem auto;
+  margin: 2rem auto;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
 
 .card {
@@ -31,13 +84,17 @@ header {
   width: 20rem;
   min-height: 25rem;
   padding: 0.5rem 1rem;
-  border: 2px solid #7752be;
-  box-shadow: 0 0 20px rgba(233,127,228,.904);
+  border: 2px solid #7752be;  
   border-radius: 5px;
+  margin-bottom: 1rem;
+  &:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(233,127,228,.904);
+  }
 }
 
 h4 {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   font-size: 1.25rem;
   padding: 0.5rem 0;
@@ -74,16 +131,21 @@ h6 {
 
 .card__description {
   font-size: 0.75rem;
+  line-height: 1rem;
   padding: 0.5rem 0;
+  text-align: justify;
 }
 
 .card__demo,
 .card__source {
   cursor: pointer;
   font-size: 0.75rem;
+  height: 1.5rem;
   &:hover {
-    text-decoration: underline;
+    font-size: 0.85rem;
+    font-weight: 700;
   }
+
 }
   
 .card__image {

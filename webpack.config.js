@@ -29,7 +29,7 @@ module.exports = (env, options) => {
           ],
         },
         {
-          test: /\.(png|svg|jpe?g|gif)$/,
+          test: /\.(png|svg|jpe?g|JPG|gif)$/,
           use: [
             {
               loader: 'file-loader',
