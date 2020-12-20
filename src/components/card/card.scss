@@ -1,0 +1,96 @@
+@import '../../style/constants';
+@import '../../style/mixins';
+
+.card {
+  display: inline-block;
+  width: 32rem;
+  min-height: 44rem;
+  padding: 0 1rem;
+  border: 2px solid $color-primary;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  //   &.hovered {
+  //     transition: 0.5s;
+  //     box-shadow: 0 0 20px rgba(233, 127, 228, 0.904);
+  //   }
+  @include media-tablet {
+    width: 25.6rem;
+    padding: 0 1rem;
+  }
+}
+
+.card__title {
+  display: flex;
+  justify-content: center;
+  @include font($size: 2rem, $height: 2rem, $weight: bold);
+  padding: 1rem 0;
+  margin: 1.5rem 0 0.5rem;
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    text-shadow: -2px 0 2px #7752be, 2px 0 2px #fff, 0 2px 2px rgba(233, 127, 228, 0.904),
+      -1px 0 1px #fff, 1px 0 1px #fff, 0 1px 1px #fff;
+  }
+}
+
+.card__description {
+  @include font($size: 1.2rem, $height: 1.6rem, $weight: normal);
+  padding: 0.5rem 0;
+  text-align: justify;
+}
+
+.card__demo,
+.card__source {
+  cursor: pointer;
+  @include font($size: 1.2rem, $height: 2.4rem, $weight: normal);
+
+  &:hover {
+    font-weight: bold;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.card__link-to-demo,
+.card__link-to-src {
+  margin-left: 1rem;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+  width: 32rem;
+  height: 20rem;
+  @include media-tablet {
+    width: 24rem;
+    height: 16rem;
+  }
+}
+
+.swiper-pagination,
+.swiper-pagination-bullets {
+  position: absolute;
+  bottom: 0;
+  --swiper-theme-color: #7752be;
+}
+
+.swiper-container {
+  width: 100%;
+
+  height: 22.5rem;
+  @include media-tablet {
+    height: 19.5rem;
+  }
+  & > .swiper-pagination.swiper-pagination-bullets {
+    bottom: 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $color-primary;
+    &::after {
+      font-size: 2.4rem;
+    }
+  }
+}

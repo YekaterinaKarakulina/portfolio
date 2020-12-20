@@ -1,12 +1,19 @@
-.cards {
-  width: 200px;
-  height: 200px;
-  border: 1px solid red;
-}
+@import '../../style/constants';
+@import '../../style/mixins';
 
-// .cont {
-//   height: 100px;
-// }
-// .lala {
-//   height: 50px;
-// }
+.cards {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  &-wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    @include media-tablet {
+      width: 90%;
+    }
+  }
+}

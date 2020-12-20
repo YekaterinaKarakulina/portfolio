@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -6,8 +5,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './components/app';
 
-// import './sass/style.scss';
-// import Swiper from './swiper/swiperAPI';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 ReactDOM.render(
   <Router>
