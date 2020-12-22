@@ -9,10 +9,6 @@
   border: 2px solid $color-primary;
   border-radius: 5px;
   margin-bottom: 1rem;
-  //   &.hovered {
-  //     transition: 0.5s;
-  //     box-shadow: 0 0 20px rgba(233, 127, 228, 0.904);
-  //   }
   @include media-tablet {
     width: 25.6rem;
     padding: 0 1rem;
@@ -28,8 +24,7 @@
   &:hover {
     cursor: pointer;
     transition: 0.5s;
-    text-shadow: -2px 0 2px #7752be, 2px 0 2px #fff, 0 2px 2px rgba(233, 127, 228, 0.904),
-      -1px 0 1px #fff, 1px 0 1px #fff, 0 1px 1px #fff;
+    opacity: 0.75;
   }
 }
 
@@ -73,7 +68,7 @@
 .swiper-pagination-bullets {
   position: absolute;
   bottom: 0;
-  --swiper-theme-color: #7752be;
+  --swiper-theme-color: $color-primary;
 }
 
 .swiper-container {

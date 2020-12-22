@@ -4,7 +4,6 @@
 header {
   height: 15rem;
   width: 100%;
-  background: $color-secondary-light;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -75,7 +74,7 @@ header {
       @include font($size: 1rem, $height: 1.5rem, $weight: normal);
     }
     & .icon {
-      color: $color-primary;
+      color: $color-dark;
       margin-right: 5px;
     }
     & a {
@@ -86,8 +85,9 @@ header {
 
 .img {
   &.certificate {
+    cursor: pointer;
     border-radius: 5%;
-    box-shadow: 0 0 20px $color-primary;
+    box-shadow: 0 0 20px $color-dark;
     @include media-tablet {
       box-shadow: none;
     }
@@ -149,4 +149,68 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.certificate__modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  &.hidden {
+    display: none;
+  }
+}
+
+.modal__image {
+  position: absolute;
+  border: 3px solid #7752be;
+  border-radius: 10px;
+
+  &.landscape {
+    top: 10vh;
+    left: 15vw;
+    width: 70vw;
+  }
+  &.portrait {
+    top: 5vh;
+    left: 30vw;
+    width: 40vw;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  z-index: 1000;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0.9rem;
+    content: '';
+    height: 2rem;
+    width: 0.2rem;
+    background-color: #fff;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &.hidden {
+    opacity: 0;
+  }
 }

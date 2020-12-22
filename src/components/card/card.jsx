@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,11 +12,27 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Card = ({ data }) => {
   const { name, description, demoLink, codeLink } = data;
+
+  const title = demoLink ? (
+    <a href={demoLink} target="_blank" rel="noreferrer">
+      <h4 className="card__title">{name}</h4>
+    </a>
+  ) : (
+    <h4 className="card__title">{name}</h4>
+  );
+
+  const cardDemo = demoLink ? (
+    <div className="card__demo">
+      <FontAwesomeIcon icon={faDesktop} className="icon" />
+      <a className="card__link-to-demo" href={demoLink} target="_blank" rel="noreferrer">
+        Link to demo
+      </a>
+    </div>
+  ) : null;
+
   return (
     <div className="card">
-      <a href={demoLink} target="_blank" rel="noreferrer">
-        <h4 className="card__title">{name}</h4>
-      </a>
+      {title}
 
       <Swiper
         breakpoints={{
@@ -43,12 +58,7 @@ const Card = ({ data }) => {
       </Swiper>
 
       <p className="card__description">{description}</p>
-      <div className="card__demo">
-        <FontAwesomeIcon icon={faDesktop} className="icon" />
-        <a className="card__link-to-demo" href={demoLink} target="_blank" rel="noreferrer">
-          Link to demo
-        </a>
-      </div>
+      {cardDemo}
       <div className="card__source">
         <FontAwesomeIcon icon={faGithub} className="icon" />
         <a className="card__link-to-src" href={codeLink} target="_blank" rel="noreferrer">
@@ -57,6 +67,14 @@ const Card = ({ data }) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  data: PropTypes.instanceOf(Object),
+};
+
+Card.defaultProps = {
+  data: {},
 };
 
 export default Card;
