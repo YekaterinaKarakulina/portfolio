@@ -1,0 +1,29 @@
+@import '../../style/constants';
+@import '../../style/mixins';
+
+.professional-info {
+  &-wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    @include media-tablet {
+      width: 90%;
+    }
+  }
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  & > div {
+    min-width: 37.5rem;
+    @include media-tablet {
+      min-width: 30rem;
+    }
+  }
+  @include font($size: 1.4rem, $height: 2.4rem, $weight: normal);
+  @include media-tablet {
+    @include font($size: 1.2rem, $height: 2rem, $weight: normal);
+  }
+}
