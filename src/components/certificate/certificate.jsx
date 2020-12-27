@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Certificate = ({ id, format, name, alt, handleClick }) => {
   const classes = `img certificate ${format}`;
-  const imageSrc = `./src/assets/${name}`;
+  const imageSrc = `./assets/${name}`;
 
   return <img data-id={id} className={classes} src={imageSrc} alt={alt} onClick={handleClick} />;
 };

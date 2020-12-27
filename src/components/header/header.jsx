@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
 import HeaderLink from '../header-link';
 import Certificate from '../certificate';
 import headerLinks from './header-links-data';
@@ -21,7 +22,9 @@ const Header = () => {
   const closeBtnClasses = isModalVisible ? 'close-btn' : 'close-btn hidden';
 
   const modalImageClasses = `modal__image ${certificate.format}`;
-  const modalImageSrc = `./src/assets/${certificate.name}`;
+
+  const modalImageSrc = `./assets/${certificate.name}`;
+
   const modal = (
     <>
       <div className={modalClasses}>
@@ -50,7 +53,7 @@ const Header = () => {
         <div className="header-wrapper">
           <div className="personal-info">
             <div className="info">
-              <img className="img photo" src="./src/assets/Yekaterina_photo.JPG" alt="" />
+              <img className="img photo" src="./assets/Yekaterina_photo.JPG" alt="" />
               <div className="title">Yekaterina Karakulina</div>
               <div className="title">FRONTEND developer</div>
             </div>
@@ -68,7 +71,6 @@ const Header = () => {
               ))}
             </div>
           </div>
-
           <div className="certificates">
             {certificates.map(({ id, format, name, alt }) => (
               <Certificate

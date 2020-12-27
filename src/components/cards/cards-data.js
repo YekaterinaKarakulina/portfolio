@@ -5,20 +5,7 @@ const data = [
     codeLink: 'https://github.com/YekaterinaKarakulina/rslang',
     description:
       'RS lang - app for learning words with interval repetition technique, individual progress tracking and mini-games. Application use API with ability to create new users, users can have learning words, setting and statistics data.',
-    images: [
-      'rslang1',
-      'rslang2',
-      'rslang3',
-      'rslang4',
-      'rslang5',
-      'rslang6',
-      'rslang7',
-      'rslang8',
-      'rslang9',
-      'rslang10',
-      'rslang11',
-      'rslang12',
-    ],
+    images: ['rslang1', 'rslang2', 'rslang3', 'rslang5', 'rslang6', 'rslang8'],
   },
   {
     name: 'Animal farm',

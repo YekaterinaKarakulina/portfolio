@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +11,7 @@ import './card.scss';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const Card = ({ data }) => {
+const Card = ({ data, handleStateChange }) => {
   const { name, description, demoLink, codeLink } = data;
 
   const title = demoLink ? (
@@ -48,10 +49,17 @@ const Card = ({ data }) => {
         }}
       >
         {data.images.map((image) => {
-          const imageSrc = `./src/assets/${image}.png`;
+          const imageSrc = `./assets/${image}.png`;
           return (
             <SwiperSlide>
-              <img className="card__image" src={imageSrc} alt={image} />
+              <img
+                className="card__image"
+                src={imageSrc}
+                alt={image}
+                onLoad={() => {
+                  handleStateChange();
+                }}
+              />
             </SwiperSlide>
           );
         })}

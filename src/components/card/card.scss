@@ -68,7 +68,11 @@
 .swiper-pagination-bullets {
   position: absolute;
   bottom: 0;
-  --swiper-theme-color: $color-primary;
+  color: $color-primary;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: $color-primary;
 }
 
 .swiper-container {

@@ -6,7 +6,7 @@ const HeaderLink = ({ iconName, text, link }) => {
   const content = link ? (
     <div>
       <FontAwesomeIcon icon={iconName} className="icon" />
-      <a className="link" href="link" target="_blank" rel="noreferrer">
+      <a className="link" href={link} target="_blank" rel="noreferrer">
         {text}
       </a>
     </div>

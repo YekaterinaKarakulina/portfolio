@@ -30,7 +30,7 @@ const headerLinks = [
     id: 5,
     icon: faLinkedin,
     text: 'My LinkedIn profile',
-    link: 'ttps://www.linkedin.com/in/yekaterina-karakulina-9a4361184',
+    link: 'https://www.linkedin.com/in/yekaterina-karakulina-9a4361184',
   },
   {
     id: 6,
